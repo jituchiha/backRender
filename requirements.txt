@@ -90,3 +90,4 @@ y-py==0.5.9
 ypy-websocket==0.8.2
 gunicorn
 Flask>=2.2.2
+Flask-Cors
