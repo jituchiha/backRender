@@ -94,3 +94,4 @@ Flask-Cors
 Flask-Mail
 Flask-PyMongo
 Flask-RESTful
+Flask-Bcrypt
