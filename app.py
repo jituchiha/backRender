@@ -51,7 +51,7 @@ password_chat=""
 #     }
 #     return response
 
-@app.route("/")
+@app.route("/",methods=['GET', 'POST'])
 def home():
     return "Welcome to my website"
 
