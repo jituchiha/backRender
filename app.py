@@ -365,4 +365,4 @@ def get_chats():
 if __name__ == '__name__':
     app.secret_key = "asdfghjklpoiuytrewqzxcvbnm1245789630"
     #app.run(debug = True)
-    app.run(host="0.0.0.0",port=8080,debug=True)
+    app.run(host="0.0.0.0",port=10000,debug=True)
