@@ -51,6 +51,11 @@ password_chat=""
 #     }
 #     return response
 
+@app.route("/")
+def home():
+    return "Welcome to my website"
+
+
 @app.route('/login', methods=["POST"])
 def login():
     global email_chat,password_chat
