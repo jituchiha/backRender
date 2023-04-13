@@ -56,7 +56,7 @@ def home():
     return "Welcome to my website"
 
 
-@app.route('/login', methods=["POST"])
+@app.route('/login', methods=["POST","GET"])
 def login():
     global email_chat,password_chat
     email = request.json.get('email')
