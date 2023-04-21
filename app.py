@@ -56,7 +56,7 @@ def home():
     return "Welcome to my website"
 
 
-@app.route('/login', methods=["POST","GET"])
+@app.route('https://renderdeptest1.onrender.com/login', methods=["POST","GET"])
 def login():
     global email_chat,password_chat
     email = request.json.get('email')
@@ -107,7 +107,7 @@ def login():
     print(session)
     return response
     
-@app.route('/register', methods=["POST"])
+@app.route('https://renderdeptest1.onrender.com/register', methods=["POST"])
 def register():
     firstname = request.json.get("firstname")
     lastname = request.json.get("lastname")
@@ -162,7 +162,7 @@ def profile():
         }
 """
    
-@app.route('/logout')
+@app.route('https://renderdeptest1.onrender.com/logout')
 def logout():
     session.clear()
 
@@ -172,7 +172,7 @@ def logout():
 
 
 
-@app.route("/data")
+@app.route("https://renderdeptest1.onrender.com/data")
 def get_documents():
 
     name=request.args.get('name',default=None)
@@ -224,7 +224,7 @@ def get_documents():
 
 #     return jsonify(json_docs)
 
-@app.route('/forgot password',methods=["POST"])
+@app.route('https://renderdeptest1.onrender.com/forgot password',methods=["POST"])
 def forgot_password():
     email=request.json.get('email')
     userfind=collection1.find_one({"email":email})
@@ -250,7 +250,7 @@ def forgot_password():
     
     return 'Email sent'
 
-@app.route("/resetpassword",methods=["POST"])
+@app.route("https://renderdeptest1.onrender.com/resetpassword",methods=["POST"])
 def reset_password():
     id=request.json.get("_id")
     password=request.json.get("password")
@@ -264,7 +264,7 @@ def reset_password():
     return "Password updated successfully"
 
 
-@app.route('/profile')
+@app.route('https://renderdeptest1.onrender.com/profile')
 def profile():
     if 'email' in session:
         return {
@@ -277,7 +277,7 @@ def profile():
             "_id": ""
         }
 
-@app.route('/profile_data')
+@app.route('https://renderdeptest1.onrender.com/profile_data')
 def profile_data():
     #id=ObjectId(session['_id'])
     id=ObjectId('64326399da5ce04ddb9d4456')
@@ -312,7 +312,7 @@ def profile_data():
     
     return jsonify(document1)
 
-@app.route('/update_user_details',methods=["POST"])
+@app.route('https://renderdeptest1.onrender.com/update_user_details',methods=["POST"])
 def update_user():
     first_name = request.json.get('first_name')
     last_name = request.json.get('last_name')
@@ -331,7 +331,7 @@ def update_user():
     return "user details updated successfully"
 
 
-@app.route('/create_events',methods=["POST"])
+@app.route('https://renderdeptest1.onrender.com/create_events',methods=["POST"])
 def create_events():
     name = request.json.get('name')
     description=request.json.get("description")
@@ -362,7 +362,7 @@ def create_events():
     
     return "event created successfully"
 
-@app.route("/chat_authentication")
+@app.route("https://renderdeptest1.onrender.com/chat_authentication")
 def get_chats():
     global email_chat,password_chat
     return jsonify({"email":email_chat,"password":password_chat})
